@@ -1,0 +1,47 @@
+1
+	1.1 - Course Intro
+		3 main models we will look at
+			Descriptive - What do neurons respond to?
+			Mechanistic - How can we simulate?
+			Interpretive - Why / Underlying principles?
+	1.2 - Descriptive Models
+		Receptive fields - sensory stimulus that generates strong response
+			Center-surround response
+		Cortical receptive fields
+			Can be orientation specific
+	1.3 - Mechanistic and Interpretive Models
+		Retina -> Lateral Geniculate Nucleaus (LGN) -> Primary Visual Cortex (V1)
+			Recurrent inputs to V1 cell as well as inputs from a pattern of LGN
+		Cortical receptive fields are a way of efficiently compressing information in a natural image
+	1.4 - Electrical Personality of Neurons
+		Neuron
+			25 um cell body
+			dendrites - inputs
+			axon - output
+				myelin sheaths - action potential hops from node of Ranvier to node of Ranvier
+					"active wire" lossless propagation
+			lots of kinds of neurons
+			"discrete and not continuous with other cells"
+				largely true
+			leaky bag of charged liquid
+				lipid bilayer makes membrane
+					ion channel in bilayer
+						voltage gated
+						chemically gated
+						mechanically gated
+				inside is ~-70mV relative to outside of cell
+				Na, Cl, H20, K molecules and ions are major constituents
+			synapse - interface between axon and cell body
+	1.5 - Making Connections: Synapses
+		Electrical synapse - gap junctions
+			like a semiconductor
+			fast connections
+		Chemical synapse - neurotransmitters
+			can have "weighting" in these synapses by augmenting number of receptors on receiving cell
+		Can be excitatory or inhibitory
+		Thought to be the basis for memory and learning
+			Synaptic PLasticity
+				Hebbian plasticity
+					Neurons that fire together, wire together
+					Long term potentiation/depression - synaptic response can stay for hours or days 
+					
