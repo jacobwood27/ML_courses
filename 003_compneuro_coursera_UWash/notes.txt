@@ -44,4 +44,40 @@
 				Hebbian plasticity
 					Neurons that fire together, wire together
 					Long term potentiation/depression - synaptic response can stay for hours or days 
-					
+						Input/output spike timing
+	1.6 Network: Brain Areas and their Function
+		Peripheral Nervous System
+			Somatic - nerves connected to muscles and sensory receptors
+				Afferent nerve fibers - inward
+				Efferent nerve fibers - outward
+			Autonomic - subconscious
+		Central Nervous System 
+			Spinal cord
+				Local feedback - reflexes
+				Descending motor control
+				Ascending sensory axons
+			Brain
+				hindbrain
+					medulla oblongata - regulates breathing etc
+					pons - sleep+arousal
+					cerebellum - timing voluntary movements, language, attention
+				midbrain - sensory reflexes
+				reticular formation - regulates
+				thalamus - "relay station" for sensory
+				hypothalamus - four Fs
+				cerebrum
+					 cerebral cortex - big dawg
+					 	layered sheet of neurons
+					 	30b neurons
+					 	10k connections each
+					 	300t total connections
+					 basal ganglia
+					 hippocampus
+					 amygdala 
+		Analogies
+			Information storage - physical/chemical structure
+			Information transmisison - Electrical/chemical signalling
+			Primary compute element - neuron
+			Computational basis - unknown
+			
+
