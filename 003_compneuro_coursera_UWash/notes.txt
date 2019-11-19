@@ -45,7 +45,7 @@
 					Neurons that fire together, wire together
 					Long term potentiation/depression - synaptic response can stay for hours or days 
 						Input/output spike timing
-	1.6 Network: Brain Areas and their Function
+	1.6 - Network: Brain Areas and their Function
 		Peripheral Nervous System
 			Somatic - nerves connected to muscles and sensory receptors
 				Afferent nerve fibers - inward
@@ -80,4 +80,54 @@
 			Primary compute element - neuron
 			Computational basis - unknown
 			
+2
+	2.1 - Neural Code
+		Brain recording techniques
+			fMRI
+				inside big scanner
+				blood O2
+				cubic mm
+				slow
+			EEG
+				hat with electrodes in contact with scalp
+				electrical response in brain region
+				noisy signal
+				fast
+			Electrode array
+				individual neuron sized array
+			Calcium imaging
+				Imaging technique
+			Patch electrodes
+				inside cell - right in the ion channel
+		Measuring neural code
+			Functional map - shows response to stimulus across a spatial area
+				Pinwheel features display highly specialized/localized regions of the tissue
+				Can be feautures (line width, angle) or semantic structures (faces, houses)
+			Tuning curve - response of single neuron by certain stimuli
+				Shows "Brad Pitt and Jennifer Anniston" neuron
+				Neurons are higher up in cortex, embody a concept over a feature
+					Fire for images of person, text of their name, or audio recording of soeone saying their name
+	2.2 - Neural Encoding: Simple Models
+		Linear response
+			r(t) = phi s(t)
+			Doesn't care about recent inputs unless we add linear filter
+				Can write as convolution
+				Example: running average
+				Example: Leaky average (slowly forgetting)
+		Temporal/Spatial filtering
+			As seen in retinal receptive fields
+			Approximated by difference of multiple gaussians
+		Spatiotemporal filtering
+		When linear isn't enough
+			Can approximate the system by wrapping the output with a nonlinear transform
+		Can be described as a linear "feature extractor" and a nonlinear "map"
+	2.3 - Neural Encoding: Feature Selection
+		Need to find what drives the neuron in question
+		In practice
+			Feed in Gaussian white noise signal
+			Plot a point corresponding to this signal in (t1,t2,t3,t4,...t99,...) space and note if it caused a spike or not
+			Find average of all signals that caused the spike
+		We can use "spike triggered average" as a filter by projecting input onto it
+		PCA is good
+		 
 
