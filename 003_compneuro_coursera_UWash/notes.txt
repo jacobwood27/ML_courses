@@ -129,5 +129,123 @@
 			Find average of all signals that caused the spike
 		We can use "spike triggered average" as a filter by projecting input onto it
 		PCA is good
-		 
+	2.4 - Neural Encoding: Variability
+		We want to define a mapping that provides maximal variability from stimulus and spike
+			Kullback-Leibler divergence (DKL) is measure of goodness of f
+		Binomial distribution
+		Poisson's distribution
+	Supplemental - Vectors and Functions
+		Functions thought of as vectors because they can be described as long lists of numbers...
+		Dot product of functions is integral of product of functions
+	Supplemental - Convolutions and Linear Systems
+		Linear System - Linear time invariant system (LTI)
+		"Output is a filtered version of the input"
+			"Output is the convolution of the filter with the input"
+		Looking for parts of the signal that resemble the filter
+			Highest output is part of the signal that most resembles the filter
+	Supplemental - Change of Basis and PCA
+3
+	3.1 - Neural Decoding and Signal Detection Theory
+		Likelihood ratio thresholding
+		Evidence accumulates 
+		Taking into account priors scales probability distributions as you would expect
+	3.2 - Population Coding and Bayesian Estimation
+		maximum likelihood
+			responses weighted by inverse of variance, so sharp informative spikes are very influential
+		maximum a posteriori (MAP)
+		can be useful for the math to look at ln(probability)
+	3.3 - Reading Minds: Stimulus Reconstruction
+		Estimator minimzes squared error over all s
+	3.4 - Fred Rieke on Visual Processing in the Retina
+		Thousands of rods can detect a few photons
+			Thresholding nonlinearity
+			Threshold is far to the right, removes all possibility of noise
+	Supplemental - Gaussians in One Dimension
+		mu = mean
+		sigma^2 = variance 
+			sigma = stdev
+		iid - idependent and identically distributed
+		CLT - central limit theorem, sums + averages of any iid random variables are gaussian
+		unimodal
+		most entropy for given mean and variance
+		fourier transform of a gaussian is a gaussian
+		Do not use when:
+			true distribution bimodal
+			true distribution over small integers
+			true distribution strictly positive
+	Supplemental - Probability distribution in 2D and Bayes' Rule
+		Joint - p(x,y) x AND y, function of x and y and distribution over x and y
+		Marginal - p(x), function of x and distribution over x
+		Conditional - p(x|y) x GIVEN y, function of x and y and distribution over x
+		Independence - p(x,y) = p(x)p(y) or, equivalently p(x|y) = p(x)
+		Chain rule - p(x,y) = p(x|y)p(y) = p(y|x)p(x)
+		Marginalization rule - p(x) = int[p(x|y)p(y)dy]
+		Bayes rule - p(x|y) = p(y|x)p(x)/p(y)
+			p(x) - prior
+			p(x|y) - posterior
+			p(y|x) - likelihood
+			p(y) - evidence
+4
+	4.1 - Information and Entropy
+		Entropy = average information of random variable (number of yes no questions)
+			H = - sum[p log2(p)]
+		Mutual information = Total entropy - average noise entropy
+			Recipe:
+				Repeat stimulus s many times to obtain P(R|s)
+				Compute variability due to noise:, noise entropy H[R|s]
+				Repeat for all s and average sum(P(s)H[R|s])
+				Copmute P(R) = sum(P(s)P(R|s)) and total entropy H[R]
+	4.2 - Calculating Information in Spike Trains
+		Spiketrain bin and word length are parameters that need to be chosen to capture information effectively
+	4.3 - Coding Principles
+		Natural stimuli has large dynamic range
+		Input binning (in say a visual system) can remap based on the envelope
+			stretching the input/output curve
+		Principles of neural design:
+			Efficiency
+			Adaptation
+			Sparseness
+5
+	5.1 - Modeling Neurons
+		Lipid bilayer membrane - capacitor
+		Ion channel - resistor
+		Ion gradient - battery
+		Nernst potential - potential where osmotic = electrostatic
+		Equilibrium potentials are different for each type of ion channel:
+			E_Na = 50mV
+			E_Ca = 150mV
+			E_K = -80mV
+			E_Cl = -60mV
+	5.2 - Spikes
+		Channel resistance is voltage dependent
+		Ion channel is made of subunits
+			Current only flows if all are open
+		Sodium channel can have inactivation gate
+		Hodgkin + Huxley equation shows time varying voltage across system with K Na, and leak ion flows
+7
+	7.1 - Synaptic Plasticity, Hebb's Rule, Statistical Learning
+		LTP/LTD - increase/decrease in synaptic strength for hours or days
+			Results in increase/decrease of EPSP
+		Hebb's rule - if A fires when B fires, the synapse is strengthened between the two
+			What about LTD?
+				Covariance based Hebb rule to update weights can address this
+		Oja's rule - like Hebb's rule, but take a term off to keep the weights from blowing up
+	7.2 - Intro to Unsupervised Learning
+		Pick most likely, "winning" neuron
+		Update weight by reassigning the cluster center to reflect new average
+		Expectation-Maximization (EM) algorithm for updating G
+			"soft", as opposed to "winner take all"
+			All the points at once, or "batch" as opposed to "online"
+	7.3 - Sparse and Predictive Coding
+		Define your eigenspace and compress images by expressing just principal components
+		Alternatively, you can use a space that is larger than the input to represent the feature basis. This results in  a flexible basis
+8
+	8.1 - Neurons as Classifiers and Supervised Learning
+		Perceptron - thresholded weighted sum of +1/-1s
+			can't do linearly unseparable data, like XOR
+	8.2 - Reinforcement Learning: Predicting Rewards
+	
 
+
+
+https://journals.sagepub.com/doi/full/10.1177/1745691617709589#_i40
