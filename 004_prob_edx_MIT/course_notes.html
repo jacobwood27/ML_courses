@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Probability - The Science of Uncertainty and Data</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <script src="/usr/share/javascript/mathjax/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+</head>
+<body>
+<header>
+<h1 class="title">Probability - The Science of Uncertainty and Data</h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#unit-0-overview">Unit 0: Overview</a></li>
+<li><a href="#unit-1-probability-models-and-axioms">Unit 1: Probability Models and Axioms</a></li>
+</ul>
+</nav>
+<p>Instructors: Prof. John Tsitsiklis, Dr. Sudarsan, Dr. Karene<br />
+Platform: edX<br />
+Part of: Course 1/4 in the MITx Micromaster Program in Statistics and Data Science<br />
+Started on: January 28, 2020<br />
+Course link: <a href="https://courses.edx.org/courses/course-v1:MITx+6.431x+1T2020/course/" class="uri">https://courses.edx.org/courses/course-v1:MITx+6.431x+1T2020/course/</a></p>
+<h2 id="unit-0-overview">Unit 0: Overview</h2>
+<ul>
+<li>Goals for the course
+<ul>
+<li>Think probabalistically</li>
+<li>Introduce tools for probability theory expressed mathematically</li>
+<li>Bring probability skills to a level where they can be applied</li>
+</ul></li>
+<li>Why does probability play such a role in science today?
+<ul>
+<li>Complex systems often cannot be perfectly modeled and described</li>
+<li>Information exists to reduce uncertainty</li>
+</ul></li>
+</ul>
+<h2 id="unit-1-probability-models-and-axioms">Unit 1: Probability Models and Axioms</h2>
+<ul>
+<li>Sample Space - all possible outcomes
+<ul>
+<li>Mutually exclusive</li>
+<li>Collectively exhaustive</li>
+</ul></li>
+<li>Probability Laws
+<ul>
+<li>Event - subset of sample space
+<ul>
+<li>Probability can be assigned to events</li>
+</ul></li>
+<li>Disjoint - two spaces that do not overlap
+<ul>
+<li><span class="math inline">\(\ A \cap B = \phi\)</span></li>
+</ul></li>
+<li>Axioms
+<ul>
+<li>Nonnegativity <span class="math inline">\(P(A) &gt;= 0\)</span></li>
+<li>Normal <span class="math inline">\(P(\Omega) = 1\)</span></li>
+<li>Finite additivity <span class="math inline">\(If \ A \cap B = \Phi, \ then \ P(A \cup B) = P(A) + P(B)\)</span></li>
+</ul></li>
+<li>Properties that follow the axioms
+<ul>
+<li><span class="math inline">\(P(A) &lt;=1\)</span></li>
+<li><span class="math inline">\(P(\phi) = 0\)</span></li>
+<li><span class="math inline">\(P(A \cup B \cup C) = P(A) + P(B) + P(C)\)</span></li>
+<li><span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span></li>
+<li><span class="math inline">\(P(A \cup B) \le P(A) + P(B)\)</span>
+<ul>
+<li>Union bound</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Examples
+<ul>
+<li>Discrete</li>
+<li>Continuous</li>
+<li>Steps
+<ol type="1">
+<li>Specify sample space</li>
+<li>Specify probability law</li>
+<li>Identify event of interest</li>
+<li>Calculate</li>
+</ol></li>
+</ul></li>
+<li>Discussion
+<ul>
+<li>Countable Additivity
+<ul>
+<li>If A1,A2,A3 is an infinite <strong>sequence</strong> of disjoint events, then additivity axiom holds
+<ul>
+<li>The elements of a unit square are “uncountable”, whereas all the integers from 0 to infinity is “countable”</li>
+</ul></li>
+</ul></li>
+<li>Mathematical Subtleties</li>
+</ul></li>
+<li>Interpretations of Probabilities
+<ul>
+<li>Frequencies</li>
+<li>Description of beliefs</li>
+<li>Betting strategies</li>
+<li>Framework for analyzing penomena with uncertain outcomes</li>
+</ul></li>
+<li>Vocabulary
+<ul>
+<li>Sample space [<span class="math inline">\(\Omega\)</span>] - space of possible outcomes</li>
+<li>Event - subset of sample space</li>
+<li>Empty set [<span class="math inline">\(\phi\)</span>] - Set containing no outcomes</li>
+<li>Disjoint - two spaces that do not overlap
+<ul>
+<li><span class="math inline">\(\ A \cap B = \phi\)</span></li>
+</ul></li>
+<li>Union [<span class="math inline">\(A \cup B\)</span>] - contains all elements that are in at least one of the two sets</li>
+<li>Intersection [<span class="math inline">\(A \cap B\)</span>] - contains all elements that are in both sets</li>
+<li>Complement [<span class="math inline">\(A^c\)</span>] - the subset of the sample space that is not within the set</li>
+</ul>
+<!--- MathJax stuff -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+  </script></li>
+</ul>
+</body>
+</html>
