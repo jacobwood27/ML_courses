@@ -21,6 +21,7 @@
 <ul>
 <li><a href="#unit-0-overview">Unit 0: Overview</a></li>
 <li><a href="#unit-1-probability-models-and-axioms">Unit 1: Probability Models and Axioms</a></li>
+<li><a href="#unit-2-conditioning-and-independence">Unit 2: Conditioning and Independence</a></li>
 </ul>
 </nav>
 <p>Instructors: Prof. John Tsitsiklis, Dr. Sudarsan, Dr. Karene<br />
@@ -109,7 +110,10 @@ Course link: <a href="https://courses.edx.org/courses/course-v1:MITx+6.431x+1T20
 </ul></li>
 <li>Vocabulary
 <ul>
-<li>Sample space [<span class="math inline">\(\Omega\)</span>] - space of possible outcomes</li>
+<li>Sample space [<span class="math inline">\(\Omega\)</span>] - space of possible outcomes
+<ul>
+<li>Also called the universal set</li>
+</ul></li>
 <li>Event - subset of sample space</li>
 <li>Empty set [<span class="math inline">\(\phi\)</span>] - Set containing no outcomes</li>
 <li>Disjoint - two spaces that do not overlap
@@ -119,6 +123,141 @@ Course link: <a href="https://courses.edx.org/courses/course-v1:MITx+6.431x+1T20
 <li>Union [<span class="math inline">\(A \cup B\)</span>] - contains all elements that are in at least one of the two sets</li>
 <li>Intersection [<span class="math inline">\(A \cap B\)</span>] - contains all elements that are in both sets</li>
 <li>Complement [<span class="math inline">\(A^c\)</span>] - the subset of the sample space that is not within the set</li>
+</ul></li>
+<li>Mathematical Background
+<ul>
+<li>Sets and De Morgan’s laws
+<ul>
+<li>Set - collection of distinct elements</li>
+<li>De Morgan’s Laws
+<ul>
+<li>Allow us to go back and forth with unions and intersections</li>
+<li><span class="math inline">\((S \cap T)^c = S^c \cup T^c\)</span></li>
+<li><span class="math inline">\(S^c \cap T^c = (S \cup T)^c\)</span></li>
+</ul></li>
+</ul></li>
+<li>Sequences and their limits
+<ul>
+<li>Convergence criteria - For any <span class="math inline">\(\epsilon &gt; 0\)</span>, there exists a time where, after this time, elements of the sequence stay within the band <span class="math inline">\(a \plusminus \epsilon\)</span>. This sequence has converged to <span class="math inline">\(a\)</span>.</li>
+</ul></li>
+<li>Infinite series
+<ul>
+<li>Monotonic - always converges and limit exists
+<ul>
+<li>Either finite or infinite</li>
+</ul></li>
+<li>Sign flipping - limit exists if <span class="math inline">\(\sum(\abs(a_i)) &lt; \inf\)</span></li>
+<li>Geometric series - <span class="math inline">\(\sum(a^i) = 1/(1-a)\)</span> if <span class="math inline">\(\abs(a)&lt;1\)</span></li>
+</ul></li>
+<li>Sums with multiple indices
+<ul>
+<li>if sum(abs(all terms)) &lt; infinity, then convergent and we can add in any order
+<ul>
+<li>if not satisfied, order can matter</li>
+</ul></li>
+</ul></li>
+<li>Countable and uncountable sets
+<ul>
+<li>Countable
+<ul>
+<li>discrete</li>
+<li>can be put in a 1-1 correspondance with positive integers</li>
+<li>examples:
+<ul>
+<li>positive integers</li>
+<li>integers</li>
+<li>pairs of positive integers</li>
+<li>rational numbers between 0 and 1</li>
+</ul></li>
+</ul></li>
+<li>Uncountable
+<ul>
+<li>continuous</li>
+<li>example:
+<ul>
+<li>any interval</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<h2 id="unit-2-conditioning-and-independence">Unit 2: Conditioning and Independence</h2>
+<ul>
+<li>Conditioning
+<ul>
+<li>Revising a model based on new information</li>
+<li>Write this as P(A|B) - probability of A given B</li>
+<li><span class="math inline">\(P(A|B) = P(A \cap B) / P(B)\)</span></li>
+<li>Conditional probabilities satisfy all the same axioms</li>
+<li>Divide and Conquer Tools
+<ul>
+<li>Multiplication rule
+<ul>
+<li><span class="math inline">\(P(A \cap B) = P(B)P(A|B)\)</span></li>
+<li>Probability a composite event occurs is the probability the first event occurs * the probability the second event occurs given the first even occured</li>
+<li>Can be generalized to n events by following the tree branches</li>
+</ul></li>
+<li>Total probability theorem
+<ul>
+<li>If sample space is partitioned into <span class="math inline">\(A_i\)</span>
+<ul>
+<li><span class="math inline">\(P(B) = \sum(P(A_i)P(B|A_i))\)</span></li>
+</ul></li>
+<li>Can be though of as a weighted average</li>
+</ul></li>
+<li>Bayes’ rule
+<ul>
+<li>System of revising “beliefs”, <span class="math inline">\(P(A_i)\)</span>, over time given observations using conditional probabilities.</li>
+<li><span class="math inline">\(P(A_i|B)=P(A_i \cap B) / P(B)\)</span></li>
+<li><span class="math inline">\(P(A_i|B)=P(A_i)P(B|A_i) / \sum(P(A_j)P(B|A_j))\)</span> for <span class="math inline">\(j\)</span> observations</li>
+<li>Bayesian inference
+<ul>
+<li>Initial beliefs</li>
+<li>Model world</li>
+<li>Draw conclusions about causes</li>
+<li>Revise beliefs</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Independence
+<ul>
+<li>Independence of two events
+<ul>
+<li>Intuitive “definition”: <span class="math inline">\(P(B|A) = P(B)\)</span></li>
+<li>Better definition: <span class="math inline">\(P(A \cap B) = P(A)P(B)\)</span></li>
+<li>Independence is not disjoint</li>
+<li>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent, <span class="math inline">\(A\)</span> and <span class="math inline">\(B^c\)</span> are independent</li>
+</ul></li>
+<li>Conditional independence
+<ul>
+<li>same as regular independence subject to condition</li>
+<li>independence does not imply conditional independence</li>
+</ul></li>
+<li>Independence of a collection of events
+<ul>
+<li>Information on some of the events does not change probabilities of the rest of the events</li>
+<li><span class="math inline">\(P(A_i \cap A_j \cap ...) = P(A_i)P(A_j)...\)</span></li>
+</ul></li>
+<li>Pairwise independence
+<ul>
+<li>independence of two events from each other</li>
+</ul></li>
+<li>Reliability
+<ul>
+<li>Use De Morgan’s laws to assess failure as complement of normal operation</li>
+</ul></li>
+<li>The King’s sibling puzzle
+<ul>
+<li>The king comes from a family of two children, what is the probability that his sibling is female?
+<ul>
+<li>2/3, be careful of assumptions</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Vocabulary
+<ul>
+<li>Partition - split space into disjoint sets that span the space</li>
 </ul>
 <!--- MathJax stuff -->
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
