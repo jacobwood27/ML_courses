@@ -23,30 +23,39 @@ Course link: [https://courses.edx.org/courses/course-v1:MITx+14.310x+1T2020/cour
 - Correlation vs Causation
 
 ## Module 2: Fundamentals of Probability, Random Variables, Joint Distributions + Collecting Data
-- Sample space - collection of all possible outcomes
-- Event - thing that can happen
-- "c" - notation for contained in a set
-- "U" - notation for union (or)
-- $\cap$ - notation for intersection (and), but we leave this out in set theory
-- Mutually exclusive - similar to disjoint, no common outcome
-- Exhaustive - Spans the sample space
-- Simple sample space - events are countable and equally likely
-- Permutation - ordered arrangement of objects
-	- Number of permutations of N objects = N!
-	- Number of permutations of N choose n = N!/(N-n)!
-- Combination - unordered arrangement of objects
-	- Number of combinations of N objects = N
-	- Number of combinations of N choose n = N!/((N-n)! n!)
-- Independence - A and B are independent if the P of their intersection = product of their P
-- Conditional probability - Probability of A given B
-	- P(A|B) = P(AB)/P(B)
-- Bayes' theorem
-	- P(A|B) = P(B|A)P(A) / (P(B|A)P(A) + P(B|Ac)P(Ac))
-- Pick k from n with replacement
-	- n^k
-- Pick k from n without replacement
-	- n! / (n-k)!
-
+- Fundamentals of Probability
+	- Sample space - collection of all possible outcomes
+	- Event - thing that can happen
+	- "c" - notation for contained in a set
+	- "U" - notation for union (or)
+	- $\cap$ - notation for intersection (and), but we leave this out in set theory
+	- Mutually exclusive - similar to disjoint, no common outcome
+	- Exhaustive - Spans the sample space
+	- Simple sample space - events are countable and equally likely
+	- Permutation - ordered arrangement of objects
+		- Number of permutations of N objects = N!
+		- Number of permutations of N choose n = N!/(N-n)!
+	- Combination - unordered arrangement of objects
+		- Number of combinations of N objects = N
+		- Number of combinations of N choose n = N!/((N-n)! n!)
+	- Independence - A and B are independent if the P of their intersection = product of their P
+	- Conditional probability - Probability of A given B
+		- P(A|B) = P(AB)/P(B)
+	- Bayes' theorem
+		- P(A|B) = P(B|A)P(A) / (P(B|A)P(A) + P(B|Ac)P(Ac))
+	- Pick k from n with replacement
+		- n^k
+	- Pick k from n without replacement
+		- n! / (n-k)!
+- Random Variables
+	- Discrete random variables - can be 
+	- Continuous random variables - picked from an interval
+		- Often discrete random variables can be modeled as continuous random variables
+	- Hypergeometric distribution - number of successes in n trials when you're sampling without replacement from a sample size N whose initial probability of success was k/N
+		- pizza with meat toppings and veggie toppings example
+	- Binomial distribution - number of successes in n trials where the trials are independent and the probability of success in each is p
+	- Probability function - Discrete random variable - f(x) = P(X=x)
+	- Probability density function - Continuous random variable
 
 
 
