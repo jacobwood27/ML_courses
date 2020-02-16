@@ -56,6 +56,21 @@ Course link: [https://courses.edx.org/courses/course-v1:MITx+14.310x+1T2020/cour
 	- Binomial distribution - number of successes in n trials where the trials are independent and the probability of success in each is p
 	- Probability function - Discrete random variable - f(x) = P(X=x)
 	- Probability density function - Continuous random variable
+	- Cumulative distribution function - F(X) = P(X <= x)
+	- Joint distribution - multivariable version of PDF
+- Collecting Data
+	- Data sources
+		- Online/existing
+			- lots of existing sources for free and open-source data
+		- Collected
+			- Belmont reports
+				- informed consent
+				- beneficence - maximize benefit and minimize harm
+				- justice
+		- Web scraping
+			- Python - beautifulsoup for html parsing
+			- R - Rvest can do basic webscraping as well
+
 
 
 
