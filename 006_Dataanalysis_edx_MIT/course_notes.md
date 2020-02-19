@@ -71,7 +71,15 @@ Course link: [https://courses.edx.org/courses/course-v1:MITx+14.310x+1T2020/cour
 			- Python - beautifulsoup for html parsing
 			- R - Rvest can do basic webscraping as well
 
-
+## Module 3: Describing Data, Joint and Conditional Distributions of Random Variables
+- Exploratory Data Analysis
+	- Histograms
+	- Kernel density - "smoothed histogram" in a sense
+		- take a kernel, could be a gaussian centered at each point, and add them all together
+		- bandwidth is the key parameter here, related to standard deviation of the underlying kernel function
+	- Comparing distributions
+	- CDFs
+	- Bivariate distributions
 
 
 
